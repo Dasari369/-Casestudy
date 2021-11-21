@@ -1,0 +1,202 @@
+1)Declare three number variables with value as 12,25,89 find the greatest number and display.
+public class GreatestNumber
+{
+	public static void main(String args[])
+	{ 
+		//declaring variables 
+		int X = 12;
+		int Y = 25;
+		int Z = 89;
+		if(X>Y&&X>Z) // checks if x is grater than y and is greater than z , if true print statement inside if block gets executed
+		{
+			System.out.println("X = "+X+" is the greatest number");
+		}
+		else if(Y>X&&Y>Z) // checks if y is greater than x and is greater than z
+		{
+			System.out.println("Y = "+Y+" is the greatest number"); // prints this statement if condition in else if is satisfied
+		}
+		else
+		{
+			System.out.println("Z = "+Z+" is the greatest number" ); // prints this statement if above conditions are false
+		}
+	}
+
+}
+
+2) Write a program in java to display the first 10 natural numbers. Expected output is 1 to 10 numbers
+
+    public class FirstNaturalNum {
+	public static void main(String args[])
+	{
+		int i; //declaring i variable
+		for(i=1;i<=10;i++) // starts  from i value =1 to i value=10 
+		{
+			System.out.println(i); // prints the output from 1 to 10 for every iteration
+		}
+	}
+
+}
+3)Write a java program to display the cube of the given number for ex: if given number is 2 then cube of it is 8
+ public class CubeOfNum {
+	public static void main(String args[])
+	{
+		int a = 2; //declaring variable and initializing it to a value
+		int cube; // declaring a variable to store the cube of given number 
+		cube=a*a*a; // cube is calculated and stored in cube variable
+		System.out.println("cube of number "+a+" is "+cube); //prints value to the screen
+	}
+
+}
+
+4)Write a java program to sum values of an array. For example a[5] ={1,2,3,4,5,6} the sum of the values is 21.
+public class SumValueOfArray {
+	public static void main(String args[])
+	{
+		int arr[] = {1,2,3,4,5,6}; //Initializing the array
+		int i,sum=0;//declaring i variable , initializing sum variable to store the sum 
+		for(i=0;i<=arr.length-1;i++)//loop for accessing the array elements
+		{
+			sum=sum+arr[i];// adding array elements to sum variable 
+		}
+		System.out.println("Sum of Array Elements is "+sum);//printing sum value
+		
+	}
+
+}
+
+5)Write a java program to test if an array contains a specific value
+  public class ArraySpecificValue 
+{
+	public static void main(String args[])
+	{
+		String str[] = new String[5];//Initializing array of length 5
+		str[0]="Laptop"; //initializing array elements
+		str[1]="Desktop";
+		str[2]="Mobile";
+		str[3]="Printer";
+		str[4]="Charger";
+		
+		for(int i=0;i<=str.length-1;i++) // for loop for accessing array elements
+		{
+			if(str[i]=="Mobile")//checks if the specified value is present or not in the array
+			{
+				System.out.println(str[i]+" is at index "+i); //if condition is true,prints the element and its index on to the display
+			}
+					
+		}
+		
+		
+	
+	}
+}
+6) Write a java program to reverse an array of integer values.
+
+public class ReverseArray {
+	public static void main(String args[])
+			{
+		int arr[] = {22,32,42,52,62,72,102};//Initializing the array 
+		int i;                             //declaring i variable for index
+		System.out.print("Reversed Array is: ");
+		for(i=arr.length-1;i>=0;i--)//for loop to access the elements of array in reverse order
+		{
+			System.out.print(arr[i]+" ");//prints the elements in reverse order
+		}
+}
+}
+7) Read the String and replace Ovals with dollar symbol program
+ public class StringReplace {
+	public static void main(String args[])
+	{
+		String str = "Core Java Training ETG"; // input string
+		char arr[] = str.toCharArray(); // converting string into character array
+		for(int i=0;i<=arr.length-1;i++)// loop for accessng all the characters in the character array
+		{
+			if(arr[i]=='a'||arr[i]=='e'||arr[i]=='i'||arr[i]=='o'||arr[i]=='u'||arr[i]=='A'||arr[i]=='E'||arr[i]=='I'||arr[i]=='O'||arr[i]=='U') //checks if any characters are vowels or not 
+			{
+				arr[i]='$'; // stores thee dollar value by replacing the characters if any vowels are present
+				
+			}
+			System.out.print(arr[i]); // prints the output with dollar symbols
+		}
+	}
+
+}
+
+8) Write a program to identify duplicate values in an array
+public class DuplicateValues {
+	public static void main(String args[]) {
+		int array[]= {27,30,10,30,60,37,60,27,10}; // Initializing array
+		int i,j; // declaring variables i,j to access array elements
+		System.out.println("Duplicate Array Elements are:");
+		for(i=0;i<array.length;i++) //starts accessing elements from index 0
+		{
+			for(j=i+1;j<array.length;j++)    // access elements from index 1    
+			{
+				if(array[i]==array[j])  // checks if element at ith position is equal to element at position j
+				{
+					System.out.print(array[i]+" "); // if condition is true , prints all the repeated elements 
+				}
+			}
+		}
+	}
+
+}
+9)Read the highest count of duplicates from array of integers
+public class DuplicateCount {
+	public static void main(String args[])
+	{
+		int array[]= {27,30,10,30,60,37,60,27,10}; //Initializing array 
+		int i,j,count=0; //declaring i and j for accessing array elements and initializes count to zero to store the count 
+		
+		for(i=0;i<array.length;i++)
+		{
+			for(j=i+1;j<array.length;j++)       
+			{
+				if(array[i]==array[j])
+				{
+					count++;
+				}
+			}
+		}
+		System.out.print(count);
+	}
+
+
+	}
+
+10)Write a program to identify 2 large numbers in an array.
+
+public class TwoLargeNum {
+	public static void main(String args[])
+	{
+		int arr[]= {100,70,250,900,30,600,950,24};
+		int firstlargenum=arr[0];//initializing largest value to first element array
+		int secondlargenum=arr[1];//initializing  second largest value to second element array
+		int firstlargenumpos=0;// variable for storing first largest number index
+		int secondlargenumpos=1;// variable for storing first largest number index
+		for(int i=0;i<=arr.length-1;i++)//loop for accessing array elements
+		{
+			if(arr[i]>firstlargenum)//checks if any element is larger than firstlargestnum = 100c
+			{   
+				//statements for storing the largest number in firstlargestnum and pos of largest num in firstlargestnumpos
+				secondlargenum=firstlargenum;
+				secondlargenumpos=firstlargenumpos;
+				firstlargenum=arr[i];
+				firstlargenumpos=i;
+				
+				}
+			// checks that array elements should be less than first largest number and greater than second largest num
+			else if(arr[i]>secondlargenum && arr[i]<firstlargenum)
+			
+          { 
+				secondlargenum=arr[i]; //if any element is greater than secondlargestnum and less than firstlargestnum, that number is stored in secondlargestnum
+				secondlargenumpos=i;//index of second largest number is stored in secondlargestnumpos
+}
+		}
+		//printing the output
+	
+	System.out.println("First Largest number "+firstlargenum+" is at position "+firstlargenumpos);
+	System.out.println("second Largest number "+secondlargenum+" is at position "+secondlargenumpos);
+		
+}
+}
