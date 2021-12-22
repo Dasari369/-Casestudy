@@ -1,0 +1,24 @@
+
+  DataBase commands
+   1.For creating database
+  create database casestudy;
+
+  2.to use the database 
+    use casestudy;
+
+  3.To create table user
+    CREATE TABLE USER(USER_ID INT NOT NULL,USERNAME VARCHAR(20) NOT NULL,EMAIL VARCHAR(35) NOT NULL,FIRST_NAME VARCHAR(15) NOT NULL,LAST_NAME VARCHAR(15),CONTACT_NUMBER BIGINT(20),ROLE VARCHAR(20),ISACTIVE BOOLEAN,DOB DATE NOT NULL,CREATED_ON DATETIME,PASSWORD VARCHAR(15),PRIMARY KEY(USER_ID))
+  4.to describe user table
+     describe user;
+     
+  
+  4.To create table task
+    CREATE TABLE TASK(Task_ID INT NOT NULL,Owner_ID INT NOT NULL ,Creator_ID INT NOT NULL ,Name VARCHAR(20),Description VARCHAR(50),Status VARCHAR(15),Priority VARCHAR(15),Notes VARCHAR(75),IsBookmarked BOOLEAN,Created_On DATETIME,Status_Changed_On DATETIME,PRIMARY KEY(TASK_ID),CONSTRAINT FK_TaskOwner FOREIGN KEY(Owner_ID) REFERENCES USER(User_id),CONSTRAINT FK_TaskCreator FOREIGN KEY(Creator_ID) REFERENCES USER(User_id));
+
+  5.to create table notification
+    CREATE TABLE NOTIFICATION(Notification_ID INT NOT NULL,TASK_ID INT NOT NULL,Task_Owner_ID INT NOT NULL,Status VARCHAR(15),Created_On DATETIME,Status_Changed_On DATETIME,PRIMARY KEY(Notification_ID),CONSTRAINT FK_Taskid FOREIGN KEY(TASK_ID) REFERENCES TASK(Task_ID),CONSTRAINT FK_TOwnerid FOREIGN KEY(Task_Owner_ID) REFERENCES USER(User_id));
+ 6. to insert values into user
+   insert into admin values(100,"Dasari Devika","dasari.devika@sonata-software.com","Dasari","Devika",9933433221,"Developer",true,'2000-10-13','2015-04-03 14:00:45','lucky');
+ 7.to fetch values from user table
+    select * from user;
+ 
