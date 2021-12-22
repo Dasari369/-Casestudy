@@ -1,0 +1,25 @@
+<p>create-task works!</p>
+<div>
+     
+    <form #taskForm1="ngForm" (ngSubmit)="onSubmit(taskForm1.value)" >
+    <p><label>TaskID:</label> <input type="number" placeholder="Enter id"  name="taskid" ngModel /></p>
+    <p><label>Owner ID:</label><input type="number" placeholder="Enter ownerid" name="ownerid" ngModel /></p>
+    <p><label>Creator ID:</label><input type="number" placeholder="Enter creatorid" name ="creatorid" ngModel /></p>
+    <p><label>Task Name: </label><input type="text" placeholder="Enter taskname" name= "taskname" ngModel /></p>
+    <p><label>Description</label><input type="text" placeholder="Description" name="taskdesc" ngModel /></p>
+    <p><label>TaskStatus:</label><input type="text" placeholder="status" name="taskstatus" ngModel /></p>
+    <p><label>Priority: </label><select name="priority"  ngModel >
+        <option value="" disabled selected>choose priority</option>
+        <option  value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+    </select>
+    </p>
+    <p><label>Task Notes: </label><input type="text" placeholder="Notes" name="tnotes" ngModel/></p>
+    <p><label>Is BookMarked: </label><input type="checkbox" name="bookmark" ngModel /></p>
+    <p><label>Created on:</label><input type="date" name="created" ngModel /></p>
+    <p><label>Status Changed On: </label><input type="date" name="changed" ngModel/></p>
+        
+
+     <button type="submit" value="submit">submit</button>
+    </form>

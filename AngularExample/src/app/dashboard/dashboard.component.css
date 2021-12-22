@@ -1,0 +1,37 @@
+.navbar{
+    background:black;
+   
+}
+.nav-link,navbar-brand{
+    color:white;
+    cursor: pointer;
+
+}
+.nav-link:hover{
+    color:rgb(236, 12, 12);
+}
+
+  .d-flex{
+      background-color: white;
+  }
+  .d-flex:hover{
+    background-color: rgb(236, 12, 12) ;
+}
+  .home img{
+      width:100%;
+      height:600px;
+      object-position:center;
+      object-fit:cover;
+      position:fixed;
+  }
+  .homecontent{
+      position:absolute;
+      top:20%;
+      right:10%;
+      transform:translate(-50%,-50%)
+  }
+  .homecontent h1{
+      color:rgb(236, 12, 12);
+      font-size:50px;
+  }
+  

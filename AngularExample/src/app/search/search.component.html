@@ -1,0 +1,55 @@
+<div>
+    <app-dashboard></app-dashboard>
+  </div>
+<div class="input-group">
+   <label>Track</label> <select class="form-control" id="status"  name="status" placeholder="Search" [(ngModel)]="status">
+      <option  value="Close">Close</option>
+      <option value="InProgress">InProgress</option>
+      <option value="Cancelled">Cancelled</option>
+      <option value="OnHold">OnHold</option>
+      </select>
+    <div class="form-group-append">
+      <button class="btn btn-primary" type="button" (click)="searchByStatus()">
+        <i class="bi bi-search"></i>
+      </button>
+      </div>
+      </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+        </div>
+        <div class="panel-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>TaskID</th>
+                <th>Name</th>
+                <th>OwnerID</th>   
+                <th>CreatorID</th>    
+                <th>Status</th>   
+                <th>Description</th>  
+                <th>Priority</th>
+                <th>Notes</th>
+                <th>BookMarked</th>
+                <th>Created</th>
+                <th>Status Changed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let t of tasks">
+               <td>{{t.taskID}}</td>
+               <td>{{t.tname}}</td>
+               <td>{{t.ownerID}}</td>
+               <td>{{t.creatorID}}</td>
+               <td>{{t.status}}</td>
+               <td>{{t.desc}}</td>
+               <td>{{t.priority}}</td>
+               <td>{{t.notes}}</td>
+               <td>{{t.bookMarked}}</td>
+               <td>{{t.createdon}}</td>
+               <td>{{t.statusChangedOn}}</td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <button  class="btn-group btn-group-lg"  role="group" routerLink="/tasks"  routerLinkActive="active">Back</button>

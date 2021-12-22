@@ -1,0 +1,17 @@
+<p>form-example works!</p>
+<div>
+    <form #userForm1="ngForm" (ngSubmit)="onSubmit(userForm1.value)">
+        UserName
+        <input type="text" placeholder="Enter your name"  name="userName" ngModel />
+        <br>
+        Password
+        <input type="password" placeholder="Enter your password" name="password" ngModel />
+        <br>
+        simple
+        <input type="radio" name="simple" value="show" ngModel />
+        <br>
+
+     <button type="submit" value="submit">submit</button>
+    </form>
+    {{name}}
+</div>

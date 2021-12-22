@@ -1,0 +1,63 @@
+<div>
+    <app-dashboard></app-dashboard>
+  </div>
+  <h3>set status</h3>
+  <div  style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+          <div class="form-group">
+              <label for="name">TaskID</label>
+              <input type="text" class="form-control" id="taskID" required [(ngModel)]="taskID" name="taskID">
+            </div>
+            <div class="form-group">
+                <label for="name">Task Status</label>
+                <select class="form-control" id="status" required [(ngModel)]="status" name="status">
+                  <option  value="Close">Close</option>
+            <option value="InProgress">InProgress</option>
+            <option value="Cancelled">Cancelled</option>
+            <option value="OnHold">OnHold</option>
+            </select>
+              </div>
+            
+      <button type="submit" class="btn-group btn-group-lg">Submit</button>
+      <button  class="btn-group btn-group-lg"  role="group" routerLink="/tasks"  routerLinkActive="active">Back</button>
+    </form>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+        </div>
+        <div class="panel-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>TaskID</th>
+                <th>Name</th>
+                <th>OwnerID</th>   
+                <th>CreatorID</th>    
+                <th>Status</th>   
+                <th>Description</th>  
+                <th>Priority</th>
+                <th>Notes</th>
+                <th>BookMarked</th>
+                <th>Created</th>
+                <th>Status Changed</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngIf="task">
+                     <td>{{task.taskID}}</td>
+                    <td>{{task.tname}}</td>
+                    <td>{{task.ownerID}}</td>
+                    <td>{{task.creatorID}}</td>
+                    <td>{{task.status}}</td>
+                    <td>{{task.desc}}</td>
+                    <td>{{task.priority}}</td>
+                    <td>{{task.notes}}</td>
+                    <td>{{task.bookMarked}}</td>
+                    <td>{{task.createdon}}</td>
+                    <td>{{task.statusChangedOn}}</td>
+                     </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+  </div>
+

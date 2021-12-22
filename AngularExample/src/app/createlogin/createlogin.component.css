@@ -1,0 +1,21 @@
+span{
+    color: palevioletred;
+}
+
+h3{
+    text-align: center;
+}
+input[type="text"]
+{
+    width: 300px;
+}
+.login{
+    position: relative;
+    margin:0 auto;
+    padding: 20px 20px 20px;
+    width:310px;
+}
+.btn{
+    margin: 0.5em;
+    background-color:palevioletred;
+}

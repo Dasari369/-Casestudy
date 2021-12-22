@@ -1,0 +1,18 @@
+<p>task-details works!</p>
+<div>
+    <h2>Task Details</h2>
+    <ul *ngFor="let task of tasks">
+        <li>taskID:{{task.taskID}}</li>
+        <li>taskOwner ID:{{task.ownerID}}</li>
+        <li> taskCreator Id:{{task.creatorID}}</li>
+        <li>taskName :{{task.tname}}</li>
+        <li>Task Status:{{task.status}}</li>
+        <li>Task Description:{{task.desc}}</li>
+        <li>Task priority:{{task.priority}}</li>
+        <li>Task Notes:{{task.notes}}</li>
+        <li>Is BookMarked:{{task.bookMarked}}</li>
+        <li>statusChangedOn:{{task.statusChangedOn}}</li>
+        <li>createdon:{{task.createdon}}</li>
+       
+    </ul>
+</div>

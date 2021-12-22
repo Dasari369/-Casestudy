@@ -1,0 +1,75 @@
+<div>
+  <app-dashboard></app-dashboard>
+</div>
+<h3>Create Task</h3>
+<div  [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">TaskID</label>
+      <input type="text" class="form-control" id="taskID" required [(ngModel)]="task.taskID" name="taskID">
+      </div>
+    
+      <div class="form-group">
+        <label for="name">TaskName</label>
+        <input type="text" class="form-control" id="tname" required [(ngModel)]="task.tname" name="tname">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Task OwnerID</label>
+        <input type="text" class="form-control" id="ownerID" required [(ngModel)]="task.ownerID" name="ownerID">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Task CreatorID</label>
+        <input type="text" class="form-control" id="creatorID" required [(ngModel)]="task.creatorID" name="creatorID">
+      </div>
+      <div class="form-group">
+        <label for="name">Task Status</label>
+        <select class="form-control" id="status" required [(ngModel)]="task.status" name="status"> 
+        <option  value="Close">Close</option>
+        <option value="InProgress">InProgress</option>
+        <option value="Cancelled">Cancelled</option>
+        <option value="OnHold">OnHold</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="name">Task Description</label>
+        <input type="text" class="form-control" id="desc" required [(ngModel)]="task.desc" name="desc">
+      </div>
+      <div class="form-group">
+        <label for="name">Task Priority</label>
+        <select class="form-control" id="priority" required [(ngModel)]="task.priority" name="priority">
+            <option value="" disabled selected>choose priority</option>
+            <option  value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="name">Task Notes</label>
+        <input type="text" class="form-control" id="notes" required [(ngModel)]="task.notes" name="notes">
+      </div>
+      <div class="form-check">
+        <label for="name">Is Bookmarked</label>
+        <input class="form-check-input" type="checkbox" id="bookMarked" required [(ngModel)]="task.bookMarked" name="bookMarked">
+      </div>
+      <div class="form-group">
+        <label for="name">Task CreatedOn</label>
+        <input type="date" class="form-control" id="createdon" required [(ngModel)]="task.createdon" name="createdon">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Task StatusChanged</label>
+        <input type="date" class="form-control" id="statusChangedOn" required [(ngModel)]="task.statusChangedOn" name="statusChangedOn">
+      </div>
+
+      <button type="submit" class="btn-group btn-group-lg" role="group">Submit</button>
+      <button  class="btn-group btn-group-sm"  role="group" routerLink="/tasks"  routerLinkActive="active">Back</button>
+     </form>
+     
+    </div>
+
+
+<div [hidden]="!submitted">
+    <h4>You submitted successfully!</h4>
+  </div>

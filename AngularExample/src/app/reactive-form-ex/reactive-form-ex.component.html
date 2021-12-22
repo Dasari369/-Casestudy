@@ -1,0 +1,17 @@
+<p>reactive form works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+    FirstName<input type="text" name="firstname" placeholder="firstname" formControlName="firstname"/>
+    <br />
+    lastname<input type="text" name="lastname" placeholder="lastname" formControlName="lastname" />
+    <br />
+    languages<select name="languages" formControlName="languages">
+        <option value="JavaScript">JavaScript</option>
+        <option value="00PS">OOPS</option>
+        <option value="Angular9">Angular9</option>
+    </select>
+    <br />
+    <input type="submit" [disabled]="!form.valid" value="submit" />
+    user name is{{name}}
+    <br />
+     selected language is {{language}}
+</form>

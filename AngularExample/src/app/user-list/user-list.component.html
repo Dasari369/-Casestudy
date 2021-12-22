@@ -1,0 +1,49 @@
+<div>
+  <app-dashboard></app-dashboard>
+</div>
+<div>
+  <label>Search : </label><input [(ngModel)]="searchtext" placeholder="search" />
+  </div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>User List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>UserID</th>
+            <th>UserName</th>
+            <th>FirstName</th>   
+            <th>lastName</th>    
+            <th>Email</th>   
+            <th>Contact</th>  
+            <th>Role</th>
+            <th>Is Active</th>
+            <th>Date Of Birth</th>
+            <th>Created On</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let u of users |async | filter:searchtext">
+           <td>{{u.userID}}</td>
+           <td>{{u.userName}}</td>
+           <td>{{u.firstName}}</td>
+           <td>{{u.lastName}}</td>
+           <td>{{u.email}}</td>
+           <td>{{u.contactNumber}}</td>
+           <td>{{u.role}}</td>
+           <td>{{u.active}}</td>
+           <td>{{u.dOB}}</td>
+           <td>{{u.createdOn|date:'fullDate'}}</td>
+           
+           <td><button (click)="deleteUser(u.userID)" class="btn btn-danger"><i class="bi bi-trash">Delete</i></button>
+            <button (click) ="updateuser(u.userID)" class ="btn btn-success" style="margin-left: 10px;"><i class="bi bi-pencil-square">Update</i></button>
+            <button (click)="UserDetails(u.userID)" class="btn btn-info" style="margin-left: 10px"><i class="bi bi-info-circle">Details</i></button>
+        </td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+ 

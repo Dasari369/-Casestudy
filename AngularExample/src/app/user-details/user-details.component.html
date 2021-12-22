@@ -1,0 +1,40 @@
+<h2>User Details</h2>
+<hr />
+<div>
+    <div>
+    <label><b>UserID:</b></label>{{user.userID }}
+</div>
+<div>
+    <label><b>UserName:</b></label>{{user.userName }}    
+</div>
+<div>
+    <label><b>FirstName:</b></label>{{user.firstName}}
+</div>
+<div>
+    <label><b>LastName:</b></label>{{user.lastName }}
+</div>
+<div>
+    <label><b>Email:</b></label>{{user.email}}
+</div>
+<div>
+    <label><b>Contact:</b></label>{{user.contactNumber}}
+</div>
+<div>
+    <label><b>Role:</b></label>{{user.role}}
+</div>
+<div>
+    <label><b>isActive :</b></label>{{user.active }}
+</div>
+<div>
+    <label><b>Date Of Birth:</b></label>{{user.dOB|date}}
+</div>
+<div>
+    <label><b>Created On:</b></label>{{user.createdOn}}
+</div>
+
+</div>
+
+<br>
+<br>
+ <button (click)="list()" class ="btn btn-primary">Back to Userlist</button> 
+

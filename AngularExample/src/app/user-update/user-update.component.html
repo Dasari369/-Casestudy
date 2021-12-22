@@ -1,0 +1,53 @@
+<div>
+  <app-dashboard></app-dashboard>
+</div>
+<h3>Update User</h3>
+<div  style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <p> <label for="name">UserName</label>:
+            <input type="text" class="form-control" id=" userName " required [(ngModel)]="user. userName " name=" userName " readonly  value="userName">
+          </p> 
+          </div>
+    
+          <div class="form-group">
+            <label for="name">First Name</label>
+            <input type="text" class="form-control" id="firstName" required [(ngModel)]="user.firstName" name=" firstName" readonly >
+          </div>
+    
+          <div class="form-group">
+            <label for="name">Last Name</label>
+            <input type="text" class="form-control" id=" lastName " required [(ngModel)]="user.lastName " name=" lastName " readonly >
+          </div>
+          <div class="form-group">
+            <label for="name">Email</label>
+            <input type="text" class="form-control" id="email " required [(ngModel)]="user.email " name="email ">
+          </div>
+          <div class="form-group">
+            <label for="name">ContactNo</label>
+            <input type="text" class="form-control" id="contactNumber " required [(ngModel)]="user.contactNumber " name="contactNumber ">
+          </div>
+          <div class="form-group">
+            <label for="name">Role</label>
+            <input type="text" class="form-control" id="role" required [(ngModel)]="user.role" name="role">
+            </div>
+        
+          <div class="form-check">
+            <label for="name">Is Active</label>
+            <input class="form-check-input" type="checkbox" id="active" required [(ngModel)]="user.active" name="active">
+          </div>
+          <div class="form-group">
+            <label for="name">Date Of Birth</label>
+            <input type="text" class="form-control" id="dOB " required [(ngModel)]="user.dOB " name="dOB" readonly >
+          </div>
+          <div class="form-group">
+            <label for="name">CreatedOn</label>
+            <input type="date" class="form-control" id="createdOn" required [(ngModel)]="user.createdOn " name="createdOn" readonly >
+          </div>
+
+    
+    
+    <button type="submit" class="btn-group btn-group-lg">Submit</button>
+    <button  class="btn-group btn-group-lg"  role="group" routerLink="/users"  routerLinkActive="active">Back</button>
+  </form>
+</div>

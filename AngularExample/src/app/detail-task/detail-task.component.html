@@ -1,0 +1,45 @@
+<div>
+    <app-dashboard></app-dashboard>
+  </div>
+<h2>Task Details</h2>
+<hr />
+<div *ngIf="task">
+    <div>
+    <label><b>Task ID:</b></label>{{task. taskID}}
+</div>
+<div>
+    <label><b>Task Name:</b></label>{{task.tname}}    
+</div>
+<div>
+    <label><b>Task OwnerID:</b></label>{{task.ownerID}}
+</div>
+<div>
+    <label><b>Task CreatorID:</b></label>{{task.creatorID}}
+</div>
+<div>
+    <label><b>Status:</b></label>{{task.status}}
+</div>
+<div>
+    <label><b> Description:</b></label>{{task.desc}}
+</div>
+<div>
+    <label><b>Priority:</b></label>{{task.priority}}
+</div>
+<div>
+    <label><b>Notes:</b></label>{{task.notes}}
+</div>
+<div>
+    <label><b>Is BookMarked:</b></label>{{task.bookMarked}}
+</div>
+<div>
+    <label><b>Created On:</b></label>{{task.createdon}}
+</div>
+<div>
+    <label><b>Status Changed On:</b></label>{{task.statusChangedOn}}
+</div>
+</div>
+
+<br>
+<br>
+ <button (click)="list()" class ="btn btn-primary">Back to Task List</button> 
+
